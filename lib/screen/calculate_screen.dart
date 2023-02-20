@@ -1,12 +1,11 @@
-// ignore_for_file: unused_label, unnecessary_statements, dead_code
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:bmr_test/components/bottom_button.dart';
-import 'package:bmr_test/components/icon_content.dart';
-import 'package:bmr_test/components/resable_card.dart';
-import 'package:bmr_test/components/round_icon_button.dart';
-import 'package:bmr_test/constants.dart';
-import 'package:bmr_test/units/calculator_screen.dart';
+import 'package:bmi_test/components/bottom_button.dart';
+import 'package:bmi_test/components/icon_content.dart';
+import 'package:bmi_test/components/resable_card.dart';
+import 'package:bmi_test/components/round_icon_button.dart';
+import 'package:bmi_test/constants.dart';
+import 'package:bmi_test/units/calculator_screen.dart';
 import 'result_screen.dart';
 
 enum Gender {
@@ -98,7 +97,7 @@ class CalculatorScreenState extends State<CalculatorScreen> {
                   ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
-                      inactiveTrackColor: Color(0xFF8D8E98),
+                      inactiveTrackColor: Color.fromARGB(255, 129, 119, 119),
                       activeTrackColor: Colors.white,
                       thumbColor: Color(0xFFEB1555),
                       overlayColor: Color(0x29EB1555),
