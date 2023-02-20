@@ -1,4 +1,4 @@
-# bmr_test
+# BMI_test
 
 A new Flutter project.
 
