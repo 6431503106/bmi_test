@@ -1,6 +1,8 @@
+// ignore_for_file: duplicate_import
+
 import 'package:flutter/material.dart';
-import 'package:bmr_test/constants.dart';
-import 'package:bmr_test/constants.dart';
+import 'package:bmi_test/constants.dart';
+import 'package:bmi_test/constants.dart';
 
 class BottomButton extends StatelessWidget {
   BottomButton({@required this.onTap, @required this.buttonTitle});

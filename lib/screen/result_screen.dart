@@ -1,7 +1,7 @@
-import 'package:bmr_test/constants.dart';
+import 'package:bmi_test/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:bmr_test/components/resable_card.dart';
-import 'package:bmr_test/components/bottom_button.dart';
+import 'package:bmi_test/components/resable_card.dart';
+import 'package:bmi_test/components/bottom_button.dart';
 
 class ResultsPage extends StatelessWidget {
   ResultsPage(

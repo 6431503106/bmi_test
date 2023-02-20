@@ -1,5 +1,5 @@
 //main
-import 'package:bm_test/constants.dart';
+import 'package:bmi_test/constants.dart';
 import 'package:flutter/material.dart';
 import 'welcome.dart';
 import 'package:flutter/services.dart';
