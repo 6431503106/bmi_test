@@ -14,6 +14,8 @@ enum Gender {
 }
 
 class CalculatorScreen extends StatefulWidget {
+  var nameResult;
+  CalculatorScreen({Key key, this.nameResult}) : super(key: key);
   @override
   CalculatorScreenState createState() => CalculatorScreenState();
 }
@@ -215,11 +217,11 @@ class CalculatorScreenState extends State<CalculatorScreen> {
             buttonTitle: 'CALCULATE',
             onTap: () {
               BmiLogic calc = BmiLogic(height: height, weight: weight);
-
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => ResultsPage(
+                    nameResult: widget.nameResult,
                     bmiResult: calc.calculateBMI(),
                     resultText: calc.getResult(),
                     interpretation: calc.getInterpretation(),

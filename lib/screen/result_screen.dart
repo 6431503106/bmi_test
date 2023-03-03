@@ -5,10 +5,11 @@ import 'package:bmi_test/components/bottom_button.dart';
 
 class ResultsPage extends StatelessWidget {
   ResultsPage(
-      {@required this.interpretation,
+      {@required this.nameResult,
+      @required this.interpretation,
       @required this.bmiResult,
       @required this.resultText});
-
+  var nameResult;
   final String bmiResult;
   final String resultText;
   final String interpretation;
@@ -27,7 +28,7 @@ class ResultsPage extends StatelessWidget {
               padding: EdgeInsets.all(15.0),
               alignment: Alignment.bottomLeft,
               child: Text(
-                'Your Result',
+                '$nameResult, your Result ',
                 style: kTitleTextStyle,
               ),
             ),

@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class WelcomeScreen extends StatelessWidget {
+  var nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,14 +44,19 @@ class WelcomeScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
+                SizedBox(
+                  width: 100,
+                ),
+                TextField(
+                  textAlign: TextAlign.center,
+                  controller: nameController,
+                  decoration: InputDecoration(hintText: "Your Name"),
+                  style: kLabelTextStyle,
+                ),
                 RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
                     children: [
-                      TextSpan(
-                        text: "Learn your body proportions\n",
-                        style: kPrimaryTextStyle,
-                      ),
                       TextSpan(
                           text: "This  calculator will also display your BMI",
                           style: kLabelTextStyle),
@@ -62,7 +68,9 @@ class WelcomeScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(
                         builder: (context) {
-                          return CalculatorScreen();
+                          return CalculatorScreen(
+                            nameResult: nameController.text,
+                          );
                         },
                       ));
                     },
