@@ -2,6 +2,7 @@ import 'package:bmi_test/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:bmi_test/components/resable_card.dart';
 import 'package:bmi_test/components/bottom_button.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ResultsPage extends StatelessWidget {
   ResultsPage(
@@ -25,10 +26,10 @@ class ResultsPage extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(1.0),
               alignment: Alignment.bottomLeft,
               child: Text(
-                '$nameResult, your Result ',
+                '$nameResult, your Result. ',
                 style: kTitleTextStyle,
               ),
             ),
@@ -63,7 +64,12 @@ class ResultsPage extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-          )
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Share.share("Your BMI is ${bmiResult}");
+              },
+              child: const Text("Share")),
         ],
       ),
     );
