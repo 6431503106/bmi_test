@@ -1,4 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:bmi_test/main.dart';
+
 import "package:flutter/material.dart";
 import 'package:bmi_test/screen/result_screen.dart';
 import 'package:bmi_test/constants.dart';
@@ -7,7 +8,6 @@ import 'package:bmi_test/components/resable_card.dart';
 import 'package:bmi_test/components/bottom_button.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:bmi_test/screen/database.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 class NoteList extends StatefulWidget {
   @override
@@ -15,9 +15,6 @@ class NoteList extends StatefulWidget {
 }
 
 class _NoteListState extends State<NoteList> {
-  final CollectionReference usersCollection =
-      FirebaseFirestore.instance.collection('users');
-
   final List<String> notes = [];
 
   void addNote() async {
@@ -85,7 +82,7 @@ class AddNoteScreen extends StatelessWidget {
             SizedBox(height: 16.0),
             ElevatedButton(
               child: Text('Save'),
-              onPressed: () {
+              onPressed: () async {
                 String newNote = _textController.text.trim();
                 Navigator.pop(context, newNote);
               },
