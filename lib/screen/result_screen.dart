@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:bmi_test/components/resable_card.dart';
 import 'package:bmi_test/components/bottom_button.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:bmi_test/screen/database.dart';
 
 class ResultsPage extends StatelessWidget {
   ResultsPage(
@@ -63,6 +64,13 @@ class ResultsPage extends StatelessWidget {
             buttonTitle: 'RE-CALCULATE',
             onTap: () {
               Navigator.pop(context);
+            },
+          ),
+          BottomButton(
+            buttonTitle: 'Note',
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => NoteList()));
             },
           ),
           ElevatedButton(
