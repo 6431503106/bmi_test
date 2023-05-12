@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "861824001606",
+    "project_id": "my-app-bmi-flutter",
+    "storage_bucket": "my-app-bmi-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861824001606:android:edff99e70cbb1164068c47",
+        "android_client_info": {
+          "package_name": "com.example.bmr_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861824001606-ab26qot7a8afl5k85uevhhuuogi9fgmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2jmTIChWQmXgmf2SUfKuKy0D8bqgHZhc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "861824001606-ab26qot7a8afl5k85uevhhuuogi9fgmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
