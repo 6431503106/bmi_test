@@ -7,6 +7,7 @@ import 'package:bmi_test/components/round_icon_button.dart';
 import 'package:bmi_test/constants.dart';
 import 'package:bmi_test/units/calculator_screen.dart';
 import 'result_screen.dart';
+import 'package:bmi_test/components/resable_card2.dart';
 
 enum Gender {
   male,
@@ -15,13 +16,13 @@ enum Gender {
 
 class CalculatorScreen extends StatefulWidget {
   var nameResult;
-  CalculatorScreen({Key key, this.nameResult}) : super(key: key);
+  CalculatorScreen({Key? key, this.nameResult}) : super(key: key);
   @override
   CalculatorScreenState createState() => CalculatorScreenState();
 }
 
 class CalculatorScreenState extends State<CalculatorScreen> {
-  Gender selectedGender;
+  Gender? selectedGender;
   int height = 180;
   int weight = 60;
   int age = 20;
@@ -73,7 +74,7 @@ class CalculatorScreenState extends State<CalculatorScreen> {
             ],
           )),
           Expanded(
-            child: ReusableCard(
+            child: ReusableCard2(
               colour: kInactiveCardColour,
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -127,7 +128,7 @@ class CalculatorScreenState extends State<CalculatorScreen> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ReusableCard(
+                  child: ReusableCard2(
                     colour: kInactiveCardColour,
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -168,7 +169,7 @@ class CalculatorScreenState extends State<CalculatorScreen> {
                   ),
                 ),
                 Expanded(
-                  child: ReusableCard(
+                  child: ReusableCard2(
                     colour: kInactiveCardColour,
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,

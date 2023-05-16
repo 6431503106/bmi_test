@@ -1,13 +1,13 @@
 import 'package:bmi_test/main.dart';
-
-import "package:flutter/material.dart";
 import 'package:bmi_test/screen/result_screen.dart';
 import 'package:bmi_test/constants.dart';
-import 'package:flutter/material.dart';
 import 'package:bmi_test/components/resable_card.dart';
 import 'package:bmi_test/components/bottom_button.dart';
+import 'package:bmi_test/screen/welcome.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:bmi_test/screen/database.dart';
+import 'package:bmi_test/screen/result_screen.dart';
+import 'package:flutter/material.dart';
 
 class NoteList extends StatefulWidget {
   @override

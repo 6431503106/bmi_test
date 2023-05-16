@@ -1,16 +1,17 @@
 import 'package:bmi_test/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:bmi_test/components/resable_card.dart';
 import 'package:bmi_test/components/bottom_button.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:bmi_test/screen/database.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:bmi_test/components/resable_card2.dart';
 
 class ResultsPage extends StatelessWidget {
   ResultsPage(
       {@required this.nameResult,
-      @required this.interpretation,
-      @required this.bmiResult,
-      @required this.resultText});
+      required this.interpretation,
+      required this.bmiResult,
+      required this.resultText});
   var nameResult;
   final String bmiResult;
   final String resultText;
@@ -37,7 +38,7 @@ class ResultsPage extends StatelessWidget {
           ),
           Expanded(
             flex: 5,
-            child: ReusableCard(
+            child: ReusableCard2(
               colour: kActiveCardColour,
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

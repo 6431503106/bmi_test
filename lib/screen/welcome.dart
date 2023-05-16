@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:bmi_test/screen/calculate_screen.dart';
 import 'package:bmi_test/main.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 void main() => runApp(MyApp());
 
